@@ -11,5 +11,31 @@
 
     <artifactId>community-deploy</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-manager</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-dao</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
