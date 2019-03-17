@@ -1,7 +1,7 @@
 package com.github.raphael008.controller;
 
 import com.github.raphael008.dao.UserDao;
-import com.github.raphael008.repository.UserRepository;
+import com.github.raphael008.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "user", produces = "application/json")
 public class UserController {
-    private final UserRepository userRepository;
+    private final UserService userService;
 
     @Autowired
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @PostMapping("findAll")
     public Iterable<UserDao> findAll() {
-        return userRepository.findAll();
+        return userService.findAll();
     }
 }
