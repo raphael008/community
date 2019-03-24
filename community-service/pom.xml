@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>community-service</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-dao</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>

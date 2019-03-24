@@ -24,5 +24,13 @@
             <groupId>com.github.raphael008</groupId>
             <artifactId>community-dao</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.raphael008</groupId>
+            <artifactId>community-common</artifactId>
+        </dependency>
     </dependencies>
 </project>
