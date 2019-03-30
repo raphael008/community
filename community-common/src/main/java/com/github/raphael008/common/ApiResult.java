@@ -13,7 +13,7 @@ public class ApiResult<T> {
     private String message;
     private T data;
 
-    public static <T> ApiResult success() {
+    public static ApiResult success() {
         ApiResult result = new ApiResult();
         result.setCode(ResultStatus.SUCCESS.getCode());
         return result;
@@ -24,6 +24,12 @@ public class ApiResult<T> {
         result.setCode(ResultStatus.SUCCESS.getCode());
         result.setMessage("");
         result.setData(t);
+        return result;
+    }
+
+    public static ApiResult failure() {
+        ApiResult result = new ApiResult();
+        result.setCode(ResultStatus.FAILURE.getCode());
         return result;
     }
 

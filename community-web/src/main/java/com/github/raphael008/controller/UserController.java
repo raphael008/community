@@ -2,7 +2,6 @@ package com.github.raphael008.controller;
 
 import com.github.raphael008.common.ApiParam;
 import com.github.raphael008.common.ApiResult;
-import com.github.raphael008.dao.UserDao;
 import com.github.raphael008.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,11 +17,6 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
-    }
-
-    @PostMapping("findAll")
-    public Iterable<UserDao> findAll() {
-        return userService.findAll();
     }
 
     @PostMapping("findUserById")
