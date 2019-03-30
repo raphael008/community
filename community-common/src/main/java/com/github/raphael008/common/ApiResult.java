@@ -1,6 +1,7 @@
 package com.github.raphael008.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.github.raphael008.enums.ResultStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,17 +13,23 @@ public class ApiResult<T> {
     private String message;
     private T data;
 
-    public static <T> ApiResult<T> success(T t) {
+    public static <T> ApiResult success() {
+        ApiResult result = new ApiResult();
+        result.setCode(ResultStatus.SUCCESS.getCode());
+        return result;
+    }
+
+    public static <T> ApiResult success(T t) {
         ApiResult<T> result = new ApiResult<>();
-        result.setCode("0000");
+        result.setCode(ResultStatus.SUCCESS.getCode());
         result.setMessage("");
         result.setData(t);
         return result;
     }
 
-    public static <T> ApiResult<T> failure(String error) {
-        ApiResult<T> result = new ApiResult<>();
-        result.setCode("9999");
+    public static <T> ApiResult failure(String error) {
+        ApiResult result = new ApiResult();
+        result.setCode(ResultStatus.FAILURE.getCode());
         result.setMessage(error);
         return result;
     }

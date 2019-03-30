@@ -28,7 +28,6 @@ public class UserController {
     @PostMapping("findUserById")
     public ApiResult findUserById(@RequestBody ApiParam<Long> param) {
         Long data = param.getData();
-        throw new NullPointerException();
-//        return ApiResult.failure("error!");
+        return ApiResult.failure("error!");
     }
 }
