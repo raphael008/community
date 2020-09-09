@@ -24,4 +24,10 @@ public class UserController {
         Long data = param.getData();
         return ApiResult.failure("error!");
     }
+
+    @PostMapping("findUserByName")
+    public ApiResult findUserByName(@RequestBody ApiParam<String> param) {
+        String data = param.getData();
+        return ApiResult.failure("error!");
+    }
 }
