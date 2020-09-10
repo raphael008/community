@@ -30,6 +30,7 @@ public class UserController {
 
     @PostMapping("findUserByName")
     public ApiResult findUserByName(@RequestBody ApiParam<String> param) {
+        // tests
         String data = param.getData();
         return ApiResult.failure("error!");
     }
