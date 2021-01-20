@@ -29,7 +29,7 @@
         <springboot.version>2.1.5.RELEASE</springboot.version>
         <springboot.maven-plugin.version>2.1.5.RELEASE</springboot.maven-plugin.version>
         <hibernate-orm.version>5.4.3.Final</hibernate-orm.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.12.1</jackson.version>
     </properties>
 
     <dependencyManagement>
